@@ -1,9 +1,19 @@
+/* Colors
+    --body-bg-color: #110032;
+    --primary-color: #241442;
+    --primary-shadow: rgba(0, 0, 0, .25);
+    --secondary-color: #7400e4;
+    --accent-color: #7400e4;
+    --cta-color: #a200d4;
+    --cta-color-hover: #8502ad;
+    --text-color: #fff;*/
 * {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 img {
@@ -25,5 +35,107 @@ ul {
 
 body {
   margin: 0;
-  font-family: sans-serif;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  background-color: #110032;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  height: 600px;
+}
+
+.parametersCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
+}
+
+.passGenerated {
+  text-align: center;
+  background-color: #241442;
+  height: 50px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.25);
+  padding: 7px;
+}
+
+.password {
+  color: white;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.lengthSelected {
+  color: white;
+  font-size: 15px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.slideBar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #241442;
+  height: 50px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.25);
+}
+
+.minAndMax {
+  color: white;
+  font-size: 15px;
+}
+
+.rangeBar {
+  width: 200px;
+  height: 2px;
+}
+
+.checkBoxes {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 18px;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 2px;
+  background-color: #241442;
+  height: 50px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.25);
+}
+
+.generateButton {
+  font-size: 12px;
+  letter-spacing: 4px;
+  height: 50px;
+  width: 300px;
+  border-radius: 10px;
+  color: white;
+  background-color: #a200d4;
+  border: none;
+}
+
+@media (hover: hover) {
+  .generateButton:hover {
+    height: 48px;
+    width: 295px;
+    background-color: #8502ad;
+  }
 }

@@ -3,10 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Document</title>
   </head>
-  <body>
+  <body class="body">
+    <main class="main">
+      <article class="parametersCard">
+        <div class="passGenerated">
+          <h3 id="finalPasswordElement" class="password"></h3>
+        </div>
+        <h2 class="lengthSelected">LENGTH: <span id="lengthElement"></span></h2>
+        <div class="slideBar">
+          <h2 class="minAndMax">4</h2>
+          <input
+            id="rangeBarElement"
+            class="rangeBar"
+            type="range"
+            min="4"
+            max="32"
+            step="1"
+          />
+          <h2 class="minAndMax">32</h2>
+        </div>
+        <div class="checkBoxes">
+          <h3>Include Uppercase</h3>
+          <input id="uppercaseElement" type="checkbox" />
+        </div>
+        <div class="checkBoxes">
+          <h3>Include Lowercase</h3>
+          <input id="lowercaseElement" type="checkbox" />
+        </div>
+        <div class="checkBoxes">
+          <h3>Include Numbers</h3>
+          <input id="numbersElement" type="checkbox" />
+        </div>
+        <div class="checkBoxes">
+          <h3>Include Symbols</h3>
+          <input id="symbolsElement" type="checkbox" />
+        </div>
+      </article>
+      <button id="generateButtonElement" class="generateButton" disabled>
+        Generate Password
+      </button>
+    </main>
     <script src="./js/scripts.js"></script>
   </body>
 </html>
