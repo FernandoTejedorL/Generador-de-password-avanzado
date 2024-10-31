@@ -28,6 +28,7 @@ const activateButton = event => {
     } else if (uppercaseElement.checked === false && lowercaseElement.checked === false
         && numbersElement.checked === false && symbolsElement.checked === false ) {
         generateButtonElement.disabled = true
+        finalPasswordElement.textContent ='P4$5w0RD!'
     }
 }
 uppercaseElement.addEventListener('change', activateButton)
