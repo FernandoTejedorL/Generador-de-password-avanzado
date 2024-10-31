@@ -20,7 +20,7 @@ console.log(valuePass)
 
 // Activar botón si hay algún check marcado
 
-const activateButton = (event) => {
+const activateButton = event => {
     if (uppercaseElement.checked === true || lowercaseElement.checked === true
         || numbersElement.checked === true || symbolsElement.checked === true )
       {
@@ -35,7 +35,7 @@ lowercaseElement.addEventListener('change', activateButton)
 numbersElement.addEventListener('change', activateButton)
 symbolsElement.addEventListener('change', activateButton)
 
-//Generar contraseña por tipos
+// Generar contraseña en finción de los checks y con la longitud indicada
 
 const generatePassword = () => {
     const upperCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'

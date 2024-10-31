@@ -1,12 +1,3 @@
-/* Colors
-    --body-bg-color: #110032;
-    --primary-color: #241442;
-    --primary-shadow: rgba(0, 0, 0, .25);
-    --secondary-color: #7400e4;
-    --accent-color: #7400e4;
-    --cta-color: #a200d4;
-    --cta-color-hover: #8502ad;
-    --text-color: #fff;*/
 * {
   box-sizing: border-box;
 }
@@ -104,6 +95,7 @@ body {
 .rangeBar {
   width: 200px;
   height: 2px;
+  accent-color: #ca3df5;
 }
 
 .checkBoxes {
@@ -128,7 +120,7 @@ body {
   width: 300px;
   border-radius: 10px;
   color: white;
-  background-color: #a200d4;
+  background-image: linear-gradient(to right, #ca3df5, #450558);
   border: none;
 }
 
