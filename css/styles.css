@@ -125,12 +125,50 @@ body {
 
 .generateButton:disabled {
   background-image: linear-gradient(to right, #494949, #000);
+  cursor: not-allowed;
 }
 
 @media (hover: hover) {
   .generateButton:hover {
-    height: 48px;
-    width: 295px;
+    scale: 0.98;
     background-color: #8502ad;
   }
+  .generateButton:not(:disabled):hover {
+    scale: 0.98;
+  }
+}
+
+/* Los label solo se puede poner despues del input*/
+
+.labelClass {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 75px;
+  height: 40px;
+  border-radius: 32px;
+  background-color: gray;
+}
+
+.labelClass:after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: translate 0.25s;
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox:checked + .labelClass::after {
+  translate: 30px;
+}
+
+.checkbox:checked + .labelClass {
+  background-image: linear-gradient(to right, #ca3df5, #450558);
 }

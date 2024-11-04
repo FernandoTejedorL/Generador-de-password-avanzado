@@ -102,7 +102,7 @@ const passwordOptions = {
     uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
     lowercase: 'abcdefghijklmnopqrstuvwxyz',
     numbers: '01234567890',
-    symbols: '!@#$%^&*()_+-={}[]:;<>,.?/',
+    symbols: '!@#$%^&*()_+-={}[]:;<>,.?/'
 }
 
 const checkPasswordOptions = () => {
