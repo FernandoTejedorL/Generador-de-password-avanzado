@@ -38,7 +38,7 @@ symbolsElement.addEventListener('change', activateButton)
 
 // Generar contraseña en finción de los checks y con la longitud indicada
 
-const generatePassword = () => {
+/*const generatePassword = () => {
     const upperCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     const lowerCharacters = 'abcdefghijklmnopqrstuvwxyz'
     const numberCharacters = '01234567890'
@@ -66,5 +66,30 @@ const generatePassword = () => {
     finalPasswordElement.textContent = mixedPassword
 }
 generateButtonElement.addEventListener('click', generatePassword)
-
+*/
+const generatePassword = () => {
+    const upperCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    const lowerCharacters = 'abcdefghijklmnopqrstuvwxyz'
+    const numberCharacters = '01234567890'
+    const symbolCharacters = '!@#$%^&*()_+-={}[]:;<>,.?/'
+    let password = ''
+    let newPassword = ''
+    if (uppercaseElement.checked === true) {
+        password += upperCharacters
+    }
+    if (lowercaseElement.checked === true) {
+        password += lowerCharacters
+    }
+    if (numbersElement.checked === true) {
+        password += numberCharacters
+    }
+    if (symbolsElement.checked === true) {
+        password += symbolCharacters
+    }
+    for (let counter = 0; counter < lengthElement.textContent; counter++){
+        newPassword+= password.charAt(Math.floor(Math.random()*password.length))
+    }
+    finalPasswordElement.textContent = newPassword
+}
+generateButtonElement.addEventListener('click', generatePassword)
 

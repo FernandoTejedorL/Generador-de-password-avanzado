@@ -123,6 +123,10 @@ body {
   border: none;
 }
 
+.generateButton:disabled {
+  background-image: linear-gradient(to right, #494949, #000);
+}
+
 @media (hover: hover) {
   .generateButton:hover {
     height: 48px;
