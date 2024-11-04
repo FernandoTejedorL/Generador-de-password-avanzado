@@ -36,7 +36,7 @@ lowercaseElement.addEventListener('change', activateButton)
 numbersElement.addEventListener('change', activateButton)
 symbolsElement.addEventListener('change', activateButton)
 
-// Generar contraseña en finción de los checks y con la longitud indicada
+// Generar contraseña en función de los checks y con la longitud indicada
 
 /*const generatePassword = () => {
     const upperCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
