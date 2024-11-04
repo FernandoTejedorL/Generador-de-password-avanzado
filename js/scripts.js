@@ -2,11 +2,11 @@ const lengthElement = document.getElementById('lengthElement');
 const rangeBarElement = document.getElementById('rangeBarElement')
 const generateButtonElement = document.getElementById('generateButtonElement');
 const finalPasswordElement = document.getElementById('finalPasswordElement')
-const uppercaseElement = document.getElementById('uppercaseElement')
-const lowercaseElement = document.getElementById('lowercaseElement')
-const numbersElement = document.getElementById('numbersElement')
-const symbolsElement = document.getElementById('symbolsElement')
-
+const uppercaseElement = document.getElementById('uppercase')
+const lowercaseElement = document.getElementById('lowercase')
+const numbersElement = document.getElementById('numbers')
+const symbolsElement = document.getElementById('symbols')
+const checkboxElements = document.querySelectorAll('.checkbox')
 // Longitud de la password
 
 const getValue = () => {
@@ -67,6 +67,7 @@ symbolsElement.addEventListener('change', activateButton)
 }
 generateButtonElement.addEventListener('click', generatePassword)
 */
+
 const generatePassword = () => {
     const upperCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     const lowerCharacters = 'abcdefghijklmnopqrstuvwxyz'
@@ -92,4 +93,26 @@ const generatePassword = () => {
     finalPasswordElement.textContent = newPassword
 }
 generateButtonElement.addEventListener('click', generatePassword)
+
+/*Podemos utilizar el querySelectorAll('.clase-común'), en este caso ver linea 9
+explicación clase 04/11/2024 minuto 1:00:00
+Se crea un objeto y se va consultando ese objeto
+
+const passwordOptions = {
+    uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+    lowercase: 'abcdefghijklmnopqrstuvwxyz',
+    numbers: '01234567890',
+    symbols: '!@#$%^&*()_+-={}[]:;<>,.?/',
+}
+
+const checkPasswordOptions = () => {
+    characters = ''
+    for (const checkbox of checkboxElements) {
+        if (checkbox.checked) {
+            console.log(passwordOptions[checkbox.id])
+        }
+    }
+
+}
+*/
 
